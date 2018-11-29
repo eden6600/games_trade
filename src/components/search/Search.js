@@ -11,7 +11,7 @@ class Search extends Component {
 
   render() {
     return (
-      <div className="bg-dark pb-3 mb-3">
+      <div className="bg-primary pb-3 mb-3">
         <div className="container">
           <div className="input-group">
             <input

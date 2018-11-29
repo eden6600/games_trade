@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 class Navbar extends Component {
   render() {
     return (
-      <nav className="navbar navbar-expand-md navbar-dark bg-dark ">
+      <nav className="navbar navbar-expand-md navbar-dark bg-primary ">
         <div className="container">
           <Link to="/" className="navbar-brand">
             Games Trade
@@ -20,7 +20,7 @@ class Navbar extends Component {
           <div className="collapse navbar-collapse" id="navbar-main">
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
-                <Link to="/" className="nav-link">
+                <Link to="/profile" className="nav-link">
                   <i className="fas fa-user-circle" /> Profile
                 </Link>
               </li>

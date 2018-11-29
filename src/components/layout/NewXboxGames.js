@@ -4,7 +4,7 @@ import GameCard from './GameCard';
 class NewXboxGames extends Component {
   render() {
     return (
-      <div className="mb-3">
+      <div className="mb-5">
         <h4>
           <i class="fab fa-xbox" /> New Xbox Games
         </h4>

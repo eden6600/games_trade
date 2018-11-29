@@ -4,7 +4,7 @@ import GameCard from './GameCard';
 export default class NewPsGames extends Component {
   render() {
     return (
-      <div className="mb-3">
+      <div className="mb-5">
         <h4>
           <i class="fab fa-playstation" /> New PS4 Games
         </h4>
