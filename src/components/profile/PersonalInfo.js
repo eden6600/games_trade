@@ -1,8 +1,15 @@
 import React, { Component } from 'react';
+import { Consumer } from '../../context';
 
 class PersonalInfo extends Component {
   render() {
-    return <div />;
+    return (
+      <Consumer>
+        {value => {
+          return <div />;
+        }}
+      </Consumer>
+    );
   }
 }
 

@@ -17,6 +17,8 @@ const reducer = (state, action) => {
 
 export class Provider extends Component {
   state = {
+    auth: true,
+    user: {},
     personalInfo: {},
     myGames: [
       {
