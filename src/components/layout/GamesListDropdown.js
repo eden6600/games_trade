@@ -6,14 +6,14 @@ import Modal from 'react-bootstrap-modal';
 function GamesListDropdown(props) {
   const { game } = props;
 
-  const onClickDelete = (game, dispatch) => {
-    dispatch({ type: 'DELETE_GAME', payload: game.id });
-  };
-
   return (
     <Consumer>
       {value => {
         const { dispatch } = value;
+
+        const onClickDelete = () => {
+          dispatch({ type: 'DELETE_GAME', payload: game.id });
+        };
 
         return (
           <React.Fragment>
@@ -33,12 +33,9 @@ function GamesListDropdown(props) {
                 aria-labelledby="dropdownMenuButton"
               >
                 <Link to="/" className="dropdown-item" href="#">
-                  <i className="far fa-edit" /> Edit
+                  <i className="fas fa-edit" /> Edit
                 </Link>
-                <button
-                  className="dropdown-item btn"
-                  onClick={onClickDelete.bind(this, game, dispatch)}
-                >
+                <button className="dropdown-item btn" onClick={onClickDelete}>
                   <i className="far fa-trash-alt" /> Delete
                 </button>
               </div>

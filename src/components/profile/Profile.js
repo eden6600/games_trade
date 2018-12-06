@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import PersonalInfo from './PersonalInfo';
-import MyGames from './MyGames';
-import TradeReq from './TradeReq';
-import Wishlist from './Wishlist';
+import PersonalInfo from './personal_info/PersonalInfo';
+import MyGames from './games_list/GamesList';
+import TradeReq from './trade_req/TradeReq';
+import Wishlist from './wishlist/Wishlist';
 
 class Profile extends Component {
   state = {

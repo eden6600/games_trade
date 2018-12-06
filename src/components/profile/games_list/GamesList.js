@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { Consumer } from '../../context';
+import { Consumer } from '../../../context';
 import classnames from 'classnames';
-import GamesListDropdown from '../layout/GamesListDropdown';
+import GamesListDropdown from '../../layout/GamesListDropdown';
 
-class MyGames extends Component {
+class GamesList extends Component {
   render() {
     return (
       <Consumer>
         {value => {
           const { myGames } = value;
 
-          if (myGames) {
+          if (myGames.length > 0) {
             return (
               <div className="animated fadeIn">
                 <table className="table text-center">
@@ -25,18 +25,21 @@ class MyGames extends Component {
                   </thead>
                   <tbody>
                     {myGames.map(game => {
+                      const { offeredGame } = game;
+
                       return (
-                        <tr key={game.id}>
-                          <td>{game.name}</td>
+                        <tr key={offeredGame.id}>
+                          <td>{offeredGame.name}</td>
                           <td>
                             <i
                               className={classnames({
-                                'fab fa-playstation': game.platform == 'PS4',
-                                'fab fa-xbox': game.platform == 'Xbox'
+                                'fab fa-playstation':
+                                  offeredGame.platform == 'PS4',
+                                'fab fa-xbox': offeredGame.platform == 'Xbox'
                               })}
                             />
                           </td>
-                          <td>{game.date}</td>
+                          <td>{game.date.getFullYear()}</td>
                           <td>
                             <GamesListDropdown game={game} />
                           </td>
@@ -74,4 +77,4 @@ class MyGames extends Component {
   }
 }
 
-export default MyGames;
+export default GamesList;
